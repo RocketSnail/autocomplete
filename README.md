@@ -6,22 +6,22 @@ My goal is to create an autocomplete simular to Minecraft's commands. When a use
 ## Using the Component
 You can copy the `/dist/autocomplete-cpnt.js` file to your project folder and load it to your website. An full example is in the `/test` folder.
 ```js
-    // Create the component. Debugging is set to true.
-    var autocomplete = new autocompleteComponent.AutocompleteComponent('inputMessage', true);
-    
-    // You must enable the component.
-    autocomplete.enable();
-    
-    /**
-     * Add your commands.
-     */
-    autocomplete.addCommand('beep');
-    autocomplete.addCommand('join', function(alias, args, response) {
-        var rooms = ['tavern', 'christmas', 'snowman_village', 'crash_site', 'forest'];
-    
-        // Respond to autocomplete with a list of rooms.
-        response(rooms, false);
-    });
+// Create the component. Debugging is set to true.
+var autocomplete = new autocompleteComponent.AutocompleteComponent('inputMessage', true);
+
+// You must enable the component.
+autocomplete.enable();
+
+/**
+ * Add your commands.
+ */
+autocomplete.addCommand('beep');
+autocomplete.addCommand('join', function(alias, args, response) {
+    var rooms = ['tavern', 'christmas', 'snowman_village', 'crash_site', 'forest'];
+
+    // Respond to autocomplete with a list of rooms.
+    response(rooms, false);
+});
 ```
 
 ## Modifying & Building
