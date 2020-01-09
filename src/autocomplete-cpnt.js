@@ -1,8 +1,9 @@
-function AutocompleteComponent(inputId, debug, commandChar) {
+function AutocompleteComponent(inputId, debug, maxSuggestions, commandChar) {
     this.inputId = inputId;
     this.commands = {};
     this.debug = debug || false;
     this.commandChar = commandChar || '/';
+    this.maxSuggestions = maxSuggestions || 10;
 }
 
 /**
@@ -52,7 +53,7 @@ AutocompleteComponent.prototype.enable = function () {
                     }
 
                     var data = $.ui.autocomplete.filter(source, term);
-                    response(data);
+                    response(data.slice(0, that.maxSuggestions));
                 } else {
                     var command = that.commands[commandAlias];
 
@@ -61,7 +62,7 @@ AutocompleteComponent.prototype.enable = function () {
                             var data = $.ui.autocomplete.filter(arr, term);
 
                             that.commands[commandAlias].updateSuggestionsOnSelect = updateSuggestionsOnSelect;
-                            response(data);
+                            response(data.slice(0, that.maxSuggestions));
                         });
                     }
                 }

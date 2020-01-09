@@ -15,7 +15,7 @@
 
     <style>
         .chat-container {
-            margin-top: 50%;
+            margin-top: 20%;
         }
     </style>
 </head>
@@ -44,8 +44,8 @@
         // This would be a reference to world.room.players in Box Critters.
         var players = {"183DCCD7A2B32A92":{"i":"183DCCD7A2B32A92","n":"Hoodie","c":"hamster","g":{"body":"tshirt_white","head":"toque_blue"},"x":433,"y":429,"z":0,"r":181,"s":5},"A98156839BAFEBE":{"i":"A98156839BAFEBE","n":"Test Hamster","c":"hamster","g":{"neck":"scarf_black","body":"tshirt_black","ears":"headphones_black","mask":"super_mask_black"},"x":673,"y":475,"z":0,"r":140,"s":5},"1C451710C934A668":{"i":"1C451710C934A668","n":"Spydar007","c":"hamster","g":{"mask":"super_mask_black","ears":"headphones_black","body":"hoodie_black","head":"toque_blue","cape":"dracula_cloak"},"x":211,"y":112,"z":0,"r":180,"s":5},"B06AF3B1403144EB":{"i":"B06AF3B1403144EB","n":"Yasuke","c":"hamster","g":{"eyes":"3d_white","head":"toque_white","body":"hoodie_white"},"x":385,"y":431,"z":0,"r":169,"s":5},"25A84B8928E17D60":{"i":"25A84B8928E17D60","n":"Toot","c":"hamster","g":{"head":"pot","eyes":"snorkel_blue","mask":"super_mask_black","body":"hoodie_blue"},"x":556,"y":386,"z":0,"r":228,"s":5},"78196E2B2D23A0BC":{"i":"78196E2B2D23A0BC","n":"Kelsey5743","c":"hamster","g":{"pack":"rocket_red","eyes":"snorkel_blue","body":"hoodie_white","hand":"keytar_red","neck":"scarf_black","head":"paperhat"},"x":485,"y":320,"z":0,"r":256,"s":5},"17A812314DF22A97":{"i":"17A812314DF22A97","n":"Lighthouse","c":"hamster","g":{"body":"stripe_red_white","head":"ballcap_black"},"x":650,"y":225,"z":0,"r":243,"s":5},"F0C5DA456D9AC7BC":{"i":"F0C5DA456D9AC7BC","n":"rex","c":"hamster","g":{"body":"hoodie_orange","head":"propeller_silver","eyes":"sun_square","hand":"guitar_blue"},"x":552,"y":218,"z":0,"r":0,"s":5},"196DEA848779512B":{"i":"196DEA848779512B","n":"Robert","c":"hamster","g":{"body":"stripe_red_white","neck":"scarf_black","eyes":"3d_white","head":"toque_blue"},"x":199,"y":320,"z":0,"r":190,"s":5},"3BC00AE479C0C46F":{"i":"3BC00AE479C0C46F","n":"Gravix","c":"hamster","g":{"pack":"rocket_red","eyes":"sun_orange"},"x":440,"y":190,"z":0,"r":180,"s":5}};
 
-        // Create the component. Debugging is set to true.
-        var autocomplete = new autocompleteComponent.AutocompleteComponent('inputMessage', true);
+        // Create the component. Debugging is set to true. 10 max suggestions.
+        var autocomplete = new autocompleteComponent.AutocompleteComponent('inputMessage', true, 10);
 
         // You must enable the component.
         autocomplete.enable();
