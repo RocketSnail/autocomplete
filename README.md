@@ -19,14 +19,10 @@ autocomplete.addCommand('beep');
 autocomplete.addCommand('join', function(alias, args, response) {
     var rooms = ['tavern', 'christmas', 'snowman_village', 'crash_site', 'forest'];
 
-    autocomplete.addCommand('join', function(alias, args, response) {
-        var rooms = ['tavern', 'christmas', 'snowman_village', 'crash_site', 'forest'];
-
-        if (args.length === 1) {
-            // Respond to autocomplete with a list of rooms.
-            response(rooms, false);
-        }
-    });
+    if (args.length === 1) {
+        // Respond to autocomplete with a list of rooms.
+        response(rooms, false);
+    }
 });
 ```
 
